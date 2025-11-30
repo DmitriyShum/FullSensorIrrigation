@@ -1,13 +1,13 @@
 /*
-()@@@@@   SS       II
-           SS      II
+()@@@@@  SSS       II
+()      SS SS      II
 ()          SS     II
 ()@@@@@    SS      II
-()          SS     II
-()           SS    II
+()          SS SS  II
+()           SSS   II
 */
 // Editor       : Dmitriy Shumkin
-// Update       : 11/12/2025
+// Update       : 11/30/2025
 // Project name : FSI (Full Sensor Irrigation)
 // File name    : FSI.ino
 
@@ -16,12 +16,28 @@
 * If need be published, an encryption key will be posted, in order to compare.
 */
 
+
+/*GOALS: 
+* print soil sensor data to the screen
+* make arduino automatically reset on power. Or figure out why LCD doesnn't turn on right away.
+* Try to connect the RGB LED
+*  Will I have to solder relay wires to the board, or how else shall I do it?
+* Make a sprinkler for widespread watering
+* Connect a flyback diode for the relay?
+*/
+
 #include <SPI.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 #include <splash.h>
 #include "DHT20.h"
+
+// Soil moisturizer
+#define RELAY_PIN 2
+#define MOISTURE_PIN A0
+#define THRESHOLD 560
+int value = analogRead(MOISTURE_PIN);
 
 // OLED Display settings
 #define SCREEN_WIDTH 128
@@ -37,7 +53,8 @@ DHT20 DHT;
 uint8_t count = 0;
 
 void setup(){
-  Serial.begin(115200);
+  Serial.begin(9600);
+  pinMode(RELAY_PIN, OUTPUT);
   Serial.println(__FILE__);
   Serial.print("DHT20 LIBRARY VERSION: ");
   Serial.println(DHT20_LIB_VERSION);
@@ -58,6 +75,7 @@ void setup(){
 
 void loop(){
   DHT.read();
+  soil();
   ssdLCD();
   delay(500);
 }
@@ -65,25 +83,27 @@ void loop(){
 void ssdLCD(){
   display.clearDisplay();
   display.setCursor(0, 0);
-  display.println("Temperature");
-  display.println(DHT.getTemperature(), 1);
-  display.println("Humidity");
+  display.println("Temperature :");
+  display.println(((DHT.getTemperature()*1.8)+32), 1); // prints temperature in F
+  display.println("Humidity    : "); // prints humidity index
   display.println(DHT.getHumidity(), 1);
+
+
+   delay(500);
+  
   display.display();
   display.clearDisplay(); // Clear display and go onto display the soil sensor status
 }
 
 // DHT20 sensor function. Might get rid of this later, since I only want bare info to print on the LCD.
 void dhtsensor(){
-if (millis() - DHT.lastRead() >= 2000)
-  {
+if (millis() - DHT.lastRead() >= 2000){
     //  READ DATA
     uint32_t start = micros();
     int status = DHT.read();
     uint32_t stop = micros();
 
-    if ((count % 10) == 0)
-    {
+    /*if ((count % 10) == 0){
       count = 0;
       Serial.println();
       Serial.println("Type\tHumidity (%)\tTemp (°C)\tTime (µs)\tStatus");
@@ -97,9 +117,8 @@ if (millis() - DHT.lastRead() >= 2000)
     Serial.print(DHT.getTemperature(), 1);
     Serial.print("\t\t");
     Serial.print(stop - start);
-    Serial.print("\t\t");
-    switch (status)
-    {
+    Serial.print("\t\t");*/
+    switch (status){
       case DHT20_OK:
         Serial.print("OK");
         break;
@@ -128,4 +147,22 @@ if (millis() - DHT.lastRead() >= 2000)
     Serial.print("\n");
   }
 }
+  void soil(){
+    int value = analogRead(MOISTURE_PIN); // read the analog value from sensor
+
+  if (value > THRESHOLD) {
+    Serial.print("The soil is DRY => turn pump ON");
+    digitalWrite(RELAY_PIN, HIGH);
+  } else {
+    Serial.print("The soil is WET => turn pump OFF");
+    digitalWrite(RELAY_PIN, LOW);
+  }
+
+  Serial.print(" (");
+  Serial.print(value);
+  Serial.println(")");
+
+  delay(2000);
+
+   }
 //Edited with <3, tears and blood.
