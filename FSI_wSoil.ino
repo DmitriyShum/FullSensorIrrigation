@@ -1,13 +1,13 @@
 /*
 ()@@@@@  SSS       II
-()       S SS      II
+()      SS SS      II
 ()          SS     II
 ()@@@@@    SS      II
-()          SS S   II
+()          SS SS  II
 ()           SSS   II
 */
 // Editor       : Dmitriy Shumkin
-// Update       : 11/24/2025
+// Update       : 12/01/2025
 // Project name : FSI (Full Sensor Irrigation)
 // File name    : FSI.ino
 
@@ -22,6 +22,8 @@
 * make arduino automatically reset on power. Or figure out why LCD doesnn't turn on right away.
 * Try to connect the RGB LED
 *  Will I have to solder relay wires to the board, or how else shall I do it?
+* Make a sprinkler for widespread watering
+* Connect a flyback diode for the relay?
 */
 
 #include <SPI.h>
@@ -34,7 +36,7 @@
 // Soil moisturizer
 #define RELAY_PIN 2
 #define MOISTURE_PIN A0
-#define THRESHOLD 700
+#define THRESHOLD 560
 int value = analogRead(MOISTURE_PIN);
 
 // OLED Display settings
@@ -73,18 +75,29 @@ void setup(){
 
 void loop(){
   DHT.read();
-  soil();
   ssdLCD();
   delay(500);
 }
-
 void ssdLCD(){
+  int value = analogRead(MOISTURE_PIN); // read the analog value from sensor
   display.clearDisplay();
   display.setCursor(0, 0);
   display.println("Temperature :");
-  display.println(DHT.getTemperature(), 1);
-  display.println("Humidity    : ");
+  display.println(((DHT.getTemperature()*1.8)+32), 1); // prints temperature in F
+  display.println("Humidity    : "); // prints humidity index
   display.println(DHT.getHumidity(), 1);
+  display.println("Soil Moisture: ");
+  display.println(value);
+  if(value > THRESHOLD){
+    display.println("Soil sensor:\n Dry, pump=on");
+    digitalWrite(RELAY_PIN, HIGH);
+  }
+  else{
+    display.println("Soil sensor: \n Moist, pump=off");
+    digitalWrite(RELAY_PIN, LOW);
+  }
+   delay(500);
+  
   display.display();
   display.clearDisplay(); // Clear display and go onto display the soil sensor status
 }
@@ -97,21 +110,6 @@ if (millis() - DHT.lastRead() >= 2000){
     int status = DHT.read();
     uint32_t stop = micros();
 
-    if ((count % 10) == 0){
-      count = 0;
-      Serial.println();
-      Serial.println("Type\tHumidity (%)\tTemp (°C)\tTime (µs)\tStatus");
-    }
-    count++;
-
-    Serial.print("DHT20 \t");
-    //  DISPLAY DATA, sensor has only one decimal.
-    Serial.print(DHT.getHumidity(), 1);
-    Serial.print("\t\t");
-    Serial.print(DHT.getTemperature(), 1);
-    Serial.print("\t\t");
-    Serial.print(stop - start);
-    Serial.print("\t\t");
     switch (status){
       case DHT20_OK:
         Serial.print("OK");
@@ -141,17 +139,4 @@ if (millis() - DHT.lastRead() >= 2000){
     Serial.print("\n");
   }
 }
-  void soil(){
-   if(value > THRESHOLD){
-    Serial.println("Soil is dry \n pump = on");
-    digitalWrite(MOISTURE_PIN, HIGH);
-   }else{
-    Serial.println("Soil is wet \n pump = off");
-   }
-   Serial.print("(");
-   Serial.print(value);
-   Serial.print(")");
-
-   delay(5000);
-   }
 //Edited with <3, tears and blood.
