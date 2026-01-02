@@ -14,6 +14,6 @@ It is built entirely on a single Arduino and one .ino program. The complete list
 - 1x Arduino Uno prototype shield
 - 1x Regular size breadboard
 - 1x Mini size breadboard
-- 1x Bunch of Jumper wires : 
-- 1x
+- 1x Bunch of Jumper wires; Needed: 6x Red (+), 6x Black (-), Orange (CLK, 0.96 OLED and DHT20 Sensor), Yellow (Data In, Soil sensor), 
+- 1x Battery pack
 - 
