@@ -10,10 +10,25 @@ It is built entirely on a single Arduino and one .ino program. The complete list
 - 1x Brass Sponge
 - 1x Eye protection glasses
 - 1x N95 Facemask
-- 1x Arduino Uno
-- 1x Arduino Uno prototype shield
+- 1x Arduino Uno or Arduino Uno R3 (https://docs.arduino.cc/hardware/uno-rev3/)
+- 1x Arduino Uno or Arduino Uno R3 prototype shield
 - 1x Regular size breadboard
 - 1x Mini size breadboard
 - 1x Bunch of Jumper wires; Needed: 6x Red (+), 6x Black (-), Orange (CLK, 0.96 OLED and DHT20 Sensor), Yellow (Data In, Soil sensor), 
 - 1x Battery pack
 - 
+
+
+
+
+
+
+
+
+
+
+
+
+
+## SHA256 Key:
+C737F71B2AC4407191BEF94F25A4E6FF09AB1CCA23D47467283A6671F7F88462
