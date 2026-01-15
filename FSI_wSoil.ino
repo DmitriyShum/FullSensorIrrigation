@@ -1,29 +1,27 @@
 /*
-()@@@@@  SSS       II
-()      SS SS      II
-()          SS     II
-()@@@@@    SS      II
-()          SS SS  II
-()           SSS   II
+FFFFFFF  SSS       II
+FF      SS SS      II
+FF          SS     II
+FFFFFFF    SS      II
+FF          SS SS  II
+FF           SSS   II
 */
+
 // Editor       : Dmitriy Shumkin
-// Update       : 12/01/2025
+// Update       : 01/14/2026
 // Project name : FSI (Full Sensor Irrigation)
 // File name    : FSI.ino
+// Description: This program is to be run with the combination of the Arduino UNO, sensors, LCD and relay provided in the README.md. 
 
-/*
-* This code has been modified, and will change within time to provide updates, and other improvements.
-* If need be published, an encryption key will be posted, in order to compare.
-*/
-
-
-/*GOALS: 
-* print soil sensor data to the screen
-* make arduino automatically reset on power. Or figure out why LCD doesnn't turn on right away.
-* Try to connect the RGB LED
-*  Will I have to solder relay wires to the board, or how else shall I do it?
-* Make a sprinkler for widespread watering
-* Connect a flyback diode for the relay?
+/* Important to read:
+* =========================
+* Error cases: The code will not execute if the board isn't connected to the computer and the correct port.
+* If the BAUD rate is incorrect, the code will return sets of symbols, such as "@.a$" and so on. To fix this, check to make sure the Serial.begin is set to Serial.begin(9600)
+* Always check the connections if a component(s) isn't turning on or is on, but faint.
+* A bad soldering job can cause many problems, including health risks, burnt out components, components connected to the wrong pins, too much solder causing wrong connections. Read the README.md, and ALWAYS follow safety procedures 
+* =========================
+* This code has been modified, and will change over time to provide updates, and other improvements. An SHA key is provided in the README.md file to compare to the current update.
+===========================
 */
 
 #include <SPI.h>
@@ -33,7 +31,7 @@
 #include <splash.h>
 #include "DHT20.h"
 
-// Soil moisturizer
+// Soil moisturizer assignments 
 #define RELAY_PIN 2
 #define MOISTURE_PIN A0
 #define THRESHOLD 560
@@ -42,14 +40,14 @@ int value = analogRead(MOISTURE_PIN);
 // OLED Display settings
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
-#define OLED_RESET     -1
-#define SCREEN_ADDRESS 0x3D ///< See datasheet for Address; 0x3D for 128x64, 0x3C for 128x32
+#define OLED_RESET    -1
+#define SCREEN_ADDRESS 0x3D // < See datasheet for Address; 0x3D for 128x64, 0x3C for 128x32
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 // DHT20 sensor
 DHT20 DHT;
 
-//globals
+//global assignment for 8 bit int
 uint8_t count = 0;
 
 void setup(){
@@ -65,11 +63,11 @@ void setup(){
   }
 
   Wire.begin();
-  DHT.begin();    //  ESP32 default pins 21 22
+  DHT.begin();  // ESP32 default pins 21 22
 
   display.clearDisplay();
   display.setTextSize(1);
-  display.setTextColor(SSD1306_WHITE);
+  display.setTextColor(SSD1306_WHITE); // Default color is WHITE
   delay(1000);
 }
 
@@ -78,6 +76,8 @@ void loop(){
   ssdLCD();
   delay(500);
 }
+
+// LCD Screen
 void ssdLCD(){
   int value = analogRead(MOISTURE_PIN); // read the analog value from sensor
   display.clearDisplay();
@@ -102,7 +102,7 @@ void ssdLCD(){
   display.clearDisplay(); // Clear display and go onto display the soil sensor status
 }
 
-// DHT20 sensor function. Might get rid of this later, since I only want bare info to print on the LCD.
+// DHT20 Sensor
 void dhtsensor(){
 if (millis() - DHT.lastRead() >= 2000){
     //  READ DATA
@@ -139,4 +139,4 @@ if (millis() - DHT.lastRead() >= 2000){
     Serial.print("\n");
   }
 }
-//Edited with <3, tears and blood.
+//Edited with <3
