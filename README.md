@@ -9,10 +9,10 @@ It is built entirely on a single Arduino and one .ino program. The complete list
 - 1x Solder spool
 - 1x Brass Sponge
 - 1x Eye protection glasses
-- 1x N95 Facemask [Amazon store](https://www.amazon.com/3M-Advanced-Filtering-Attachment-AFFM-3/dp/B097F93LZ4/ref=sr_1_1?dib=eyJ2IjoiMSJ9.SxnjVuZyEQt-Gi8U_MYs8lD95fEBFdyJSeIZ0uHZk_o_r4ZCKbUYO44Hx1uD2oX1WUYYRV85L4VkfiWcY5jy8xPiU_5k5m_Nvp3SxZNXYFd67wC5Q-5OFX5iOlHmKNMHI8y6uCGoRhVPhPR9nuzWohx53hX0v75TJEnosxWk0XlaxFPD6t1s11JRwmRHaBvoP4K4acEnaknaDy5nNvTwhjkTi2ueKf5U-lrBOb9F-ZycHwlRpg5ay5AhwLZjWdUk_6qz0ANnICwqXlCl1sp9JANdAKwu-zVo7hgvpfH1knM.iJ29fYyujjpkreOuP1a8IehPtXdAUlejZ-Az0k21udo&dib_tag=se&keywords=3m%2Bn95%2Bface%2Bmasks&qid=1768531577&refinements=p_72%3A1248921011&rnid=1248919011&sr=8-1&th=1)
-- 1x Arduino Uno or Arduino Uno R3 [Arduino store](https://docs.arduino.cc/hardware/uno-rev3/)
-- 1x Arduino Uno or Arduino Uno R3 prototype shield 
-- 1x Regular size breadboard
+- 1x 3M P100 Respirator Facemask [Amazon store](https://www.amazon.com/3M-P100-Disposable-Particulate-Respirator/dp/B001BXRRH4/ref=sr_1_1_sspa?crid=2HPXBSIOI9LP0&dib=eyJ2IjoiMSJ9.ukTxBUeXfSSNd2Q1DdWuekbHYbiGqH1C_Cpm9W76oHdsF6ITjhBWTzKarWEGedI4VBgCs9TU8ksJhvRFWl0bcAOBF4MAm74qy93xWR4qiZHH2bmY-NbsxNtcgN5Hrd1GNgWixWZxiMVZ1R7k-Old3nBwL0U5k1EnxHJn9SKgfxdw4UWYNTOZXmNFuz8p8ANh99tlyyxUN1OVDd2fhC-IMQwxahgKQI7x9g2zj3MiAjAqj6OZI6b9_Rc1SbD75vEmeXDS-NkufsEH6IN0KVP_ZRteSIFNWTO3lRNS3U1JVS8.7sKhBhWlRu9oJgDL3Xenq6wO6vCapFBHyUYQPfSi0Ko&dib_tag=se&keywords=P100+respirator+mask&qid=1768657518&s=hi&sprefix=p100+respirator+mas%2Ctools%2C194&sr=1-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1)
+- 1x Arduino Uno R3 [Arduino store](https://docs.arduino.cc/hardware/uno-rev3/)
+- 1x Arduino Uno R3 Prototype Shield [
+- 1x Regular size breadboard [Adafruit Store](https://www.adafruit.com/product/2077)
 - 1x Mini size breadboard
 - 1x Bunch of male to male Jumper wires; It's good to have extras.
 - 1x Bunch of female to female Jumper wires [Arduino store](https://store-usa.arduino.cc/collections/cables-wires/products/40-colored-female-female-jumper-wires)
