@@ -21,12 +21,13 @@ It is built entirely on a single Arduino and one .ino program. The complete list
 - 1x DHT20 temperature and humidity sensor [Sparkfun store](https://www.sparkfun.com/humidity-and-temperature-sensor-dht20.html)
 - 1x Capacitive soil moisture sensor [Amazon](https://www.sparkfun.com/humidity-and-temperature-sensor-dht20.html)
 - 1x SSD1306 128x64 OLED LCD Screen [Not Found]
-- Relay
+- 5V Relay
 - 9V Pump
 - Vinyl tube
 - Flower pot
 - Dirt
-
+- Water source: A half or full gallon bottle recommended
+  
 It is also recommended that you know some basic electronics, programming, and an idea of Arduino connections.
 
 ## SHA256 Key:
