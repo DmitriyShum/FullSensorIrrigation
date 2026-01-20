@@ -18,7 +18,16 @@ It is built entirely on a single Arduino and one .ino program. The complete list
 - 1x Bunch of female-female Jumper wires [Arduino store](https://store-usa.arduino.cc/collections/cables-wires/products/40-colored-female-female-jumper-wires)
 - 1x Battery pack [Adafruit store](https://www.adafruit.com/product/67)
 - 1x 9V battery, Alkaline is recommended [Amazon store](https://www.amazon.com/Duracell-Coppertop-Long-lasting-All-Purpose-Household/dp/B00009V2QT/ref=sr_1_1?crid=15IL71975V0P6&dib=eyJ2IjoiMSJ9.B3CGf6WVzeYqIxAoB_jlpztKhwMvy_D5IzC9A3ZdEKXYVEphwTXvFvpiBTNtkpYLWmlCRUSYGedcY7l9uStzpeF_oGQfimxStqULbq9rRXKmWq6BZjudA6FmfLhJ-1OkJy9eAAHdqp92FaV9O52W3U_e8Sm554DTT1akLt3wbC5lNbWSjMTHD8Pcbib7ZUfMTkRTQ65funT9NUSK8zW0B6ykE7BoiLdLgBd-u7CvAhycrRIDCphNFB6YfCucQu06fIfSZT82dtgxvSzCUlLQtVMRRhASmcJtbrL1pt2jcrg.jYj6o17QOxBAOHPa2Hq9qLWaiKPNlUlM-p1DfK7FJkA&dib_tag=se&keywords=9V%2Bbattery&qid=1768531696&refinements=p_72%3A1248903011%2Cp_123%3A195694&rnid=85457740011&sprefix=9v%2Bbattery%2Caps%2C132&sr=8-1&th=1)
-- 
+- 1x DHT20 temperature and humidity sensor [Sparkfun store](https://www.sparkfun.com/humidity-and-temperature-sensor-dht20.html)
+- 1x Capacitive soil moisture sensor [Amazon](https://www.sparkfun.com/humidity-and-temperature-sensor-dht20.html)
+- 1x SSD1306 128x64 OLED LCD Screen [Not Found]
+- Relay
+- 9V Pump
+- Vinyl tube
+- Flower pot
+- Dirt
+
+It is also recommended that you know some basic electronics, programming, and an idea of Arduino connections.
 
 ## SHA256 Key:
 C737F71B2AC4407191BEF94F25A4E6FF09AB1CCA23D47467283A6671F7F88462
