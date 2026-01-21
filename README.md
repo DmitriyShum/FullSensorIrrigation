@@ -1,4 +1,4 @@
-# FullSensorIrrigation (FSI) System on Arduino
+# FullSensorIrrigation (FSI) System on Arduino (List still WIP)
 
 ## About
 This project was one that I had to make for the Computer Architecture / Embedded Systems course. 
