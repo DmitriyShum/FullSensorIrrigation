@@ -29,7 +29,7 @@ It is built entirely on a single Arduino and one .ino program. The complete list
 - Soil [Amazon](https://www.amazon.com/Miracle-Gro-VB00008-Potting-Mix-Pack/dp/B087F7GNFG/ref=sr_1_9?crid=15SGD7GK3GJ2S&dib=eyJ2IjoiMSJ9.re1Fkkqjg1VSpL94HgNQiUDwwCDAFbuHWReh0K7u-7MeCrwF4aOfbH66cgDGHYdpQnUwa31XbsnePRVOpgPr-k8HzFuS7f8BGGQgb_py9RiqxhyvWD2Sm4-mybytBTW16Nnl5fWHuF074lO67Yx69myS51NGMfynfGVF7S49PxlUJCQ0oE_wHXFF6LqW-TK0WbI-2FvGqg0vtNCWMJbkN9t5JUZS1qSjlnJUp-sQslVNrqZawZnL2RQSS6n25A01AmTu6WIwPtnx4CKi3JsVMqpxQjqXlxcki9gvWfcSY0Y.-P5c5U70y3QIj9Sn8Gwcj2pu1WTBrCF_L8azhw_zlo0&dib_tag=se&keywords=soil%2Bfor%2Bindoor%2Bplants&qid=1769145608&refinements=p_36%3A-1600%2Cp_72%3A2661618011&rnid=2661611011&sprefix=soil%2Bfor%2Bindoor%2Bplant%2Caps%2C130&sr=8-9&th=1)
 - Water source: A half or full gallon bottle recommended
   
-It is also recommended that you know some basic electronics, programming, and an idea of Arduino connections.
+It is also recommended that you know some basic electricity, soldering, programming, and an idea of Arduino connections.
 
 ## SHA256 Key:
 C737F71B2AC4407191BEF94F25A4E6FF09AB1CCA23D47467283A6671F7F88462
