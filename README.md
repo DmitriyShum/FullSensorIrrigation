@@ -30,6 +30,11 @@ It is built entirely on a single Arduino and one .ino program. The complete list
 - Water source: A half or full gallon bottle recommended
   
 It is also recommended that you know some basic electricity, soldering, programming, and an idea of Arduino connections.
+## To Run:
+- Open the Arduino IDE
+- Verify/Compile the FSI.ino program
+- Upload the program to the correct board!
+- You may need to press the RST (Reset) button on the board to activate the LCD screen.
 
 ## SHA256 Key:
 C737F71B2AC4407191BEF94F25A4E6FF09AB1CCA23D47467283A6671F7F88462
