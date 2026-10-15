@@ -15,11 +15,10 @@ It is built entirely on a single Arduino and one .ino program. The complete list
 - 1x Regular size breadboard [Adafruit Store](https://www.adafruit.com/product/2077)
 - 1x Mini size breadboard [Adafruit store](https://www.adafruit.com/product/65)
 - 1x Bunch of male-male Jumper wires; It's good to have extras. [Adafruit store](https://www.adafruit.com/product/1956)
-- 1x Bunch of female-female Jumper wires [Arduino store](https://store-usa.arduino.cc/collections/cables-wires/products/40-colored-female-female-jumper-wires)
 - 1x Battery pack [Adafruit store](https://www.adafruit.com/product/67)
 - 1x 9V battery, Alkaline is recommended [Amazon store](https://www.amazon.com/Duracell-Coppertop-Long-lasting-All-Purpose-Household/dp/B00009V2QT/ref=sr_1_1?crid=15IL71975V0P6&dib=eyJ2IjoiMSJ9.B3CGf6WVzeYqIxAoB_jlpztKhwMvy_D5IzC9A3ZdEKXYVEphwTXvFvpiBTNtkpYLWmlCRUSYGedcY7l9uStzpeF_oGQfimxStqULbq9rRXKmWq6BZjudA6FmfLhJ-1OkJy9eAAHdqp92FaV9O52W3U_e8Sm554DTT1akLt3wbC5lNbWSjMTHD8Pcbib7ZUfMTkRTQ65funT9NUSK8zW0B6ykE7BoiLdLgBd-u7CvAhycrRIDCphNFB6YfCucQu06fIfSZT82dtgxvSzCUlLQtVMRRhASmcJtbrL1pt2jcrg.jYj6o17QOxBAOHPa2Hq9qLWaiKPNlUlM-p1DfK7FJkA&dib_tag=se&keywords=9V%2Bbattery&qid=1768531696&refinements=p_72%3A1248903011%2Cp_123%3A195694&rnid=85457740011&sprefix=9v%2Bbattery%2Caps%2C132&sr=8-1&th=1)
 - 1x DHT20 temperature and humidity sensor [Sparkfun store](https://www.sparkfun.com/humidity-and-temperature-sensor-dht20.html)
-- 1x Capacitive soil moisture sensor [Amazon](https://www.sparkfun.com/humidity-and-temperature-sensor-dht20.html)
+- 1x Capacitive soil moisture sensor [Amazon](https://www.amazon.com/DIYables-Capacitive-Moisture-TLC555I-Raspberry/dp/B0DYDN9RG4?pd_rd_w=kWof3&content-id=amzn1.sym.f3626488-c5a2-4cac-9b1d-06aacb66c381&pf_rd_p=f3626488-c5a2-4cac-9b1d-06aacb66c381&pf_rd_r=3C053RR1RQXY3NJTTRW3&pd_rd_wg=srPN1&pd_rd_r=f1715ad7-8e37-412d-b425-31dd178ba29d&pd_rd_i=B0DYDN9RG4&ref_=pd_bap_d_grid_rp_0_3_i&th=1)
 - 1x SSD1306 128x64 OLED LCD Screen [Not Found]
 - 12V Power Supply 
 - 5V Relay [Amazon](https://www.amazon.com/DIYables-2-Channel-Arduino-ESP8266-Raspberry/dp/B0BXKLFQQH?ref_=ast_sto_dp)
